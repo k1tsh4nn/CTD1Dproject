@@ -1,0 +1,297 @@
+import time
+def get_user_choice(choices):
+    while True:
+        print("Choices:")
+        for num, choice_text in choices.items():
+            print(f"{num}. {choice_text}")
+
+        choice = input("Enter the number of your choice: ")
+        if choice.isdigit() and choice in choices:
+            return choices[choice]  # Return the actual choice_text, not the number
+        else:
+            print("Invalid choice. Try again.")
+
+def restart():
+    play_game()
+    
+# Scenario Paths
+def segment_1(name):
+    print("{} sees Alicia sitting alone in the canteen.".format(name))
+    time.sleep(1)
+    print("You musters up the courage to walk up to her.")
+    time.sleep(1)
+    print(f"{name}: 'Hey, Alicia. Mind if I sit here?'")
+    time.sleep(1)
+    print("Alicia: (Rolls eyes) 'Suit yourself.'")
+    time.sleep(1)
+    print(f"{name}: (Quick, think of something to say before this gets awkward.)")
+    return get_user_choice({"1": "Talk about sports", "2": "Talk about games", "3": "Talk about school"})
+
+
+def segment_11(name):
+    print(f"{name}: 'Sooo, did you catch the game last night?'")
+    time.sleep(1)
+    print("Alicia: 'Why would I waste my time on that? Those things are for losers.'")
+    time.sleep(1)
+    print(f"{name}: (Chuckles)'I guess we’re all entitled to our opinions'")
+    time.sleep(1)
+    print(f"{name}: (Glances at you) Why are you even talking to me? I’m not exactly the friendliest person, y’know…")
+    return get_user_choice({"1": "Yeah, but I don’t buy into rumors", "2": "Idk, I just thought you seemed lonely"})
+
+
+def segment_111(name):
+    print(f"{name}: 'Yeah, but I don’t buy into rumors. Plus, I think there's more to you than people realize.'")
+    time.sleep(1)
+    print("Alicia: (Raises an eyebrow)'You're not like the others, huh?'")
+    time.sleep(1)
+    print(f"{name}: 'I guess not. I see past the tough exterior.'")
+    time.sleep(1)
+    print("Alicia: (Scoffs) 'You're wasting your time. I don’t do the whole ‘nice’ thing'")
+    time.sleep(1)
+    print(f"{name}: 'Fair enough. But hey, if you ever need someone to prove you wrong, I’m your guy'")
+    time.sleep(1)
+    print("Alicia: (Laughs sarcastically) 'Sure, whatever.'")
+    time.sleep(1)
+    print("Alicia’s birthday arrives.")
+    time.sleep(1)
+    print(f"{name}: 'Hey, happy birthday, Alicia.'")
+    time.sleep(1)
+    print("Alicia: (Surprised) 'How did you know?'")
+    time.sleep(1)
+    print(f"{name}: 'I have my ways.' (She can’t know that I had to dive deep into her Instagram Account.)")
+    time.sleep(1)
+    print(f"{name}: 'A-anyway, I got you this.")
+    time.sleep(1)
+    print(f"{name}: (I hope she doesn’t freak out once she sees that I got her a)")
+    return get_user_choice({"1": "Book", "2": "Plushy", "3": "Dog"})
+    
+    
+def segment_1111(name):
+    print("Alicia opens the small gift to find a book.")
+    time.sleep(1)
+    print("Alicia: 'Eyes widen I've been wanting this!'")
+    time.sleep(1)
+    print(f"{name}: 'I remembered you mentioned it once. Thought you might like it")
+    time.sleep(1)
+    print("Alicia: (Softens) 'Thanks, {}.'".format(name))
+    time.sleep(1)
+    print("As the school year nears its end, during a lunch break...")
+    time.sleep(1)
+    print(f"{name}: 'So, what's the plan after graduation?")
+    time.sleep(1)
+    print("Alicia: 'Why do you care?'")
+    time.sleep(1)
+    print(f"{name}: 'Because you're more than this tough-girl act. I want to know the real you.")
+    time.sleep(1)
+    print("Alicia: (Pauses) 'I...I haven’t really figured it out yet.'")
+    time.sleep(1)
+    print(f"{name}: 'That’s okay. You have time.")
+    time.sleep(1)
+    print("Alicia: (Looks down) 'I've never really had someone see past the act before.'")
+    time.sleep(1)
+    print(f"{name}: 'Well, I see something special in you, Alicia.")
+    time.sleep(1)
+    print("Graduation day arrives, and as they say their goodbyes...")
+    time.sleep(1)
+    print("Alicia: 'Thanks for everything, {}. For not giving up on me.'".format(name))
+    time.sleep(1)
+    print(f"{name}: 'You were worth it. Promise me something?")
+    time.sleep(1)
+    print("Alicia: 'What?'")
+    time.sleep(1)
+    print(f"{name}: 'Don't let the world make you hard, okay?")
+    time.sleep(1)
+    print("Alicia: (Nods, tears glistening) 'I'll try.'")
+    time.sleep(1)
+    print("Years later, {} receives an unexpected invitation.".format(name))
+    time.sleep(1)
+    print("Alicia’s message: “Hey, it’s been a while. Would love to catch up. Café on 5th, 3 PM?”")
+    time.sleep(1)
+    print("At the café, Alicia arrives, now softer, a genuine smile on her face.")
+    time.sleep(1)
+    print("Alicia: Thanks for coming.")
+    time.sleep(1)
+    return get_user_choice({"1": "Restart"})
+
+
+def segment_12(name):
+    print(f"{name}: 'So, uh, I noticed you’re into games.'")
+    time.sleep(1)
+    print("Alicia: (Pauses and looks up) 'Uh huh, what about it?'")
+    time.sleep(1)
+    print(f"{name}: 'I'm a huge gamer too! Have you played the new game Jalorant that just came out? It's sooo much fun. And the graphics are insane! I mean, the level of detail in the gun models, the skins, the map—'")
+    time.sleep(1)
+    print("Alicia: (Giving a judgemental look) 'Yea...I’ve no idea what you're talking about.'")
+    time.sleep(1)
+    print("Alicia: 'I’m not really into those types of games.'")
+    return get_user_choice({"1": "Continue yapping", "2": "Change the subject"})
+
+
+def segment_121(name):
+    print(f"{name}: 'But wait, let me show you this epic round I had the other day. The adrenaline rush was unreal! I was playing Joru and all of my teammates were already dead so I was in a 1v5 scenario with only a Joperator. 2 enemies were dumb enough to push me 1 by 1 but I easily destroyed them as soon as they came into my crosshair and–'")
+    time.sleep(1)
+    print("Alicia had already left midway through your rant. However, from behind, felt a tap on your shoulder, you turn around to some guy just standing there")
+    time.sleep(1)
+    print("Some guy: 'Bro, were you that Joru from yesterday, twitchdottvesturrr42069'")
+    time.sleep(1)
+    print(f"{name}: 'Yooo that was me!'")
+    time.sleep(1)
+    print("Some guy: 'Brooo you were insane! I was the Jjett that game'")
+    time.sleep(1)
+    print(f"{name}: 'YooOoo")
+    time.sleep(1)
+    print("Jjett that game: 'YooOoo")
+    time.sleep(1)
+    print("You didn’t get the girl of your dreams, but maybe the dreams are the friends we made along the way")
+    time.sleep(1)
+    return get_user_choice({"1": "Restart"})
+
+
+def segment_13(name):
+    print(f"{name}: ' Saw that we were in the same Math class, did you do the homework yet?")
+    time.sleep(1)
+    print("Alicia: ' Umm...No...Anyway, why do you care?'")
+    time.sleep(1)
+    print(f"{name}: 'Oh because there's a lot of typo in question 13.'")
+    time.sleep(1)
+    print("Alicia: '(Pauses) Oh...Is that why Prof. Bernard keeps spamming in my email?'")
+    time.sleep(1)
+    print(f"{name}: 'Um...yea...")
+    time.sleep(1)
+    print("Alicia: '(Pauses) Mm...'")
+    time.sleep(1)
+    print("Alicia: (Glances at you) 'Why are you even talking to me? I’m not exactly the friendliest person, y’know'")
+    time.sleep(1)
+    return get_user_choice({"1": "Yeah, but I don’t buy into rumors", "2": "Idk, I just thought you seemed lonely"})
+
+
+def segment_112(name):
+    print(f"{name}: 'Idk, I just thought you seemed lonely.'")
+    time.sleep(1)
+    print("Alicia: 'Did you literally say idk irl? Weirdo.'")
+    time.sleep(1)
+    print(f"{name}: 'Did you just say irl irl? Weirdo.'")
+    time.sleep(1)
+    print("Alicia SLAMS the table and stands up aggressively, clearly annoyed")
+    time.sleep(1)
+    print("Alicia: 'Dude, what's your problem?'")
+    return get_user_choice({"1": "Double down you aint no bitch", "2": "Apologize like the pussy you are"})
+
+
+def segment_1121(name):
+    print("You stand up as well")
+    time.sleep(1)
+    print(f"{name}: (Smirks) 'Oh, so you can show emotion'")
+    time.sleep(1)
+    print("Alicia: '(Glares into your eyes) I’m about to show you MORE than just emotion'")
+    time.sleep(1)
+    print("Alicia clenches her fist. You take notice and bring your arms up to your head.")
+    time.sleep(1)
+    print("The next few moments went by in a blur. All you remember is everything turned to black.")
+    time.sleep(1)
+    print("You woke up to find yourself in the nurse’s office, laying in a bed.")
+    time.sleep(1)
+    print("To your surprise, you see Alicia sitting on a chair by your side, staring out the window.")
+    time.sleep(1)
+    print("Alicia: 'Hey...You’re finally awake'")
+    time.sleep(1)
+    print(f"{name}: 'Urghh...What happened?'")
+    time.sleep(1)
+    print("Alicia: 'I knocked you out in one punch and everyone in the canteen watched you lay on the floor face down'")
+    time.sleep(1)
+    print(f"{name}: (Rubs the sore cheek) 'Ohh..right...'")
+    time.sleep(1)
+    print(f"{name}: 'I guess what I said really tick you off, huh?'")
+    time.sleep(1)
+    print("Alicia turns towards you, a mix of guilt and defensiveness in her eyes.")
+    time.sleep(1)
+    print("Alicia: 'You were getting too close. I don't let people in easily.'")
+    time.sleep(1)
+    print(f"{name}: 'I get it. I should've known better.'")
+    time.sleep(1)
+    print("Alicia hesitated, fidgeting with her fingers.")
+    time.sleep(1)
+    print("Alicia: 'H-hey... I-I'm sorry. I have a way of pushing people away.'")
+    time.sleep(1)
+    print("You manage a small smile, despite the throbbing ache.")
+    time.sleep(1)
+    print(f"{name}: 'Apology accepted. Though next time, maybe a warning before the punch?")
+    time.sleep(1)
+    print("Alicia chuckled softly, a rare glimpse of vulnerability crossing her features again.")
+    time.sleep(1)
+    print("Alicia: 'Yeah, I'll keep that in mind.'")
+    time.sleep(1)
+    print(f"{name}: 'Thanks for sticking around. You didn't have to.'")
+    time.sleep(1)
+    print("Alicia shrugged, looking out the window again.")
+    time.sleep(1)
+    print("Alicia: 'I didn't want to leave without knowing you were okay.'")
+    time.sleep(1)
+    print(f"{name}: ...")
+    time.sleep(1)
+    print("Alicia: ...")
+    time.sleep(1)
+    print(f"{name}: 'Hey, do you maybe wanna grab lunch tomorrow? Somewhere less... punchy?'")
+    time.sleep(1)
+    print("Alicia: (Shocked) 'You still wanna hang out after that?'")
+    time.sleep(1)
+    print(f"{name}: 'Yeah. I figure it can't get worse, right?'")
+    time.sleep(1)
+    print("Alicia: (Scoffs) 'Fine. But don't say I didn't warn you'")
+    time.sleep(1)
+    print("Your eyes meet, and you feel a spark of something beyond mere curiosity. Or maybe it's just the burning sensation in your cheek. Guess pain is a form of love too.")
+    time.sleep(1)
+    return get_user_choice({"1": "Restart"})
+
+
+def segment_1122(name):
+    print(f"{name}: 'Woah, woah, I’m sorry. I didn't mean to offend you.'")
+    time.sleep(1)
+    print("Alicia’s face relaxes slightly, still annoyed.")
+    time.sleep(1)
+    print("Alicia: 'Tch...Whatever'")
+    time.sleep(1)
+    print("She picks up her bag and walks off. Maybe that wasn’t the best approach after all.")
+    time.sleep(1)
+    return get_user_choice({"1": "Restart"})
+
+
+def play_game():
+    name = get_player_name()
+    current_segment = segment_1(name)
+    print(current_segment)
+    while current_segment:
+        # Choice Path
+        if current_segment == "Talk about sports":
+            current_segment = segment_11(name)
+        elif current_segment == "Change the subject":
+            current_segment = segment_11(name)    
+        elif current_segment == "Yeah, but I don’t buy into rumors":
+            current_segment = segment_111(name)
+        elif current_segment == "Book":
+            current_segment = segment_1111(name) 
+        elif current_segment == "Talk about games":
+            current_segment = segment_12(name)
+        elif current_segment == "Continue yapping":
+            current_segment = segment_121(name)
+        elif current_segment == "Talk about school":
+            current_segment = segment_13(name)   
+        elif current_segment == "Idk, I just thought you seemed lonely":
+            current_segment = segment_112(name)      
+        elif current_segment == "Double down you aint no bitch":
+            current_segment = segment_1121(name)
+        elif current_segment == "Apologize like the pussy you are":
+            current_segment = segment_1122(name)
+        elif current_segment == "Restart":
+            restart()
+        
+            current_segment = segment_1(name)
+        
+
+def get_player_name():
+    name = input("Enter your name: ")
+    print(f"Welcome, {name}!")
+    return name
+
+if __name__ == "__main__":
+    play_game()
